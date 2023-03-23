@@ -5,9 +5,9 @@ module.exports = {
     node: true,
   },
   extends: [
-    'eslint:recomended',
-    'plugin:@typescript-eslint/eslint-recomended',
-    'plugin:@typescript-eslint/recomended',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'next/core-web-vitals',
     'standard-with-typescript',
@@ -20,8 +20,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    project: './tsconfig.json',
   },
   plugins: ['react', '@typescript-eslint', 'import', 'unused-imports'],
   rules: {
@@ -80,5 +79,7 @@ module.exports = {
     ],
     'unused-imports/no-unused-imports': 'error',
     'import/no-duplicates': 'error',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
   },
 }
