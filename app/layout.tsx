@@ -8,8 +8,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const hoge = 'hoge'
+
   return (
     <html lang="en">
+      <h1>{hoge}</h1>
       <body>{children}</body>
     </html>
   )
